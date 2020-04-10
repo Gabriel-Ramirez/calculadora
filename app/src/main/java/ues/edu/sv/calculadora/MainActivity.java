@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnMasMenos;
     private Button btnPotencia;
 
-    DecimalFormat formato = new DecimalFormat("#.##");
+    DecimalFormat formato = new DecimalFormat("#.####");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +108,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
 
                 display.setText(display.getText().toString()+"0");
@@ -121,9 +128,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
                 }
-
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
+                }
                 display.setText(display.getText().toString()+"1");
 
                 break;
@@ -133,7 +145,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
                 display.setText(display.getText().toString()+"2");
                 break;
@@ -143,7 +161,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
                 display.setText(display.getText().toString()+"3");
 
@@ -154,7 +178,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
                 display.setText(display.getText().toString()+"4");
                 break;
@@ -164,7 +194,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
 
                 display.setText(display.getText().toString()+"5");
@@ -177,7 +213,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
                 display.setText(display.getText().toString()+"6");
                 break;
@@ -187,7 +229,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
                 display.setText(display.getText().toString()+"7");
                 break;
@@ -197,7 +245,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
 
                 display.setText(display.getText().toString()+"8");
@@ -208,38 +262,62 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
                     resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText(""+resultado);
+                    display2.setText("= "+resultado);
+                }
+                if (display.getText().toString().contains("√")){
+                    segundoNumero = Double.parseDouble(pantallaInvisible);
+                    numeroAnterior = 1;
+                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    display2.setText("= "+resultado);
                 }
                 display.setText(display.getText().toString()+"9");
                 break;
             case R.id.btnMas:
                 numeroAnterior = Double.parseDouble(pantallaInvisible);
                 pantallaInvisible ="";
-//                numeroAnterior = Double.parseDouble(display.getText().toString());
+                if(resultado != null){
+                    display.setText(resultado);
+                    numeroAnterior = Double.parseDouble(resultado);
+                }
+
                 signo = '+';
                 display.setText(display.getText().toString()+"+");
                 break;
             case R.id.btnMenos:
                 numeroAnterior = Double.parseDouble(pantallaInvisible);
                 pantallaInvisible ="";
+                if(resultado != null){
+                    display.setText(resultado);
+                    numeroAnterior = Double.parseDouble(resultado);
+                }
+
                 signo = '-';
                 display.setText(display.getText().toString()+"-");
                 break;
             case R.id.btnEntre:
                 numeroAnterior = Double.parseDouble(pantallaInvisible);
                 pantallaInvisible ="";
+                if(resultado != null){
+                    display.setText(resultado);
+                    numeroAnterior = Double.parseDouble(resultado);
+                }
+
                 signo = '/';
                 display.setText(display.getText().toString()+"/");
                 break;
             case R.id.btnPor:
                 numeroAnterior = Double.parseDouble(pantallaInvisible);
                 pantallaInvisible ="";
+                if(resultado != null){
+                    display.setText(resultado);
+                    numeroAnterior = Double.parseDouble(resultado);
+                }
                 signo = '*';
                 display.setText(display.getText().toString()+"*");
                 break;
             case R.id.btnIgual:
                 display.setText(display.getText().toString());
-                display2.setTextSize(20);
+                display2.setTextSize(40);
                 display2.setText(""+resultado);
                 break;
             case R.id.btnAC:
@@ -256,6 +334,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnPower:
                 activarDesactivarComponentes();
                 break;
+
+            case R.id.btnBorrar:
+                if (pantallaInvisible.length()>0){
+                    pantallaInvisible = pantallaInvisible.substring(0,pantallaInvisible.length()-1);
+                    display.setText(pantallaInvisible);
+                }
+                break;
+
+            case R.id.btnRaiz:
+                numeroAnterior = ' ';
+                pantallaInvisible ="";
+//                if(resultado != null){
+//                    display.setText(resultado);
+//                    numeroAnterior = Double.parseDouble(resultado);
+//                }
+                signo = '√';
+                display.setText("√");
+
+               break;
         }
     }
 
@@ -315,8 +412,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
 
+            case '√':
+                resp = Math.sqrt(segundoNumero);
+                break;
         }
 
-         return "= "+formato.format(resp);
+         return formato.format(resp);
     }
 }

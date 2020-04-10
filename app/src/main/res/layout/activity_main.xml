@@ -49,10 +49,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/colorOrange"
-                android:text="C"
+                android:backgroundTint="@color/colorRed"
+                android:text="&lt;--"
                 ></Button>
-
             <Button
                 android:id="@+id/btnPower"
                 android:layout_width="wrap_content"
@@ -61,21 +60,6 @@
                 android:backgroundTint="@color/colorRed"
                 android:text="ON"></Button>
 
-            <Button
-                android:id="@+id/btnPorcentaje"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorRed"
-                android:text="%"></Button>
-
-            <Button
-                android:id="@+id/btnParentesis"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorRed"
-                android:text="("></Button>
         </LinearLayout>
 
         <LinearLayout
@@ -84,6 +68,7 @@
             android:orientation="horizontal"
             android:layout_weight="1"
             >
+
 
             <Button
                 android:id="@+id/btnAC"
@@ -99,12 +84,7 @@
                 android:layout_weight="1"
                 android:text="^2"></Button>
 
-            <Button
-                android:id="@+id/btnRaiz"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="√"></Button>
+
 
             <Button
                 android:id="@+id/btnEntre"
@@ -226,11 +206,11 @@
             android:layout_weight="1" >
 
             <Button
-                android:id="@+id/btnMasMenos"
+                android:id="@+id/btnRaiz"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+/-"></Button>
+                android:text="√"></Button>
 
             <Button
                 android:id="@+id/btnCero"

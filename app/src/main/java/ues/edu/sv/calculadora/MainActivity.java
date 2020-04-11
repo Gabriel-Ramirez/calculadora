@@ -265,7 +265,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     numeroAnterior = Double.parseDouble(resultado);
                 }
                 signo = '+';
-                display.setText(display.getText().toString()+"+");
+                if (resultado.equals("ERROR")){
+                    display.setText("+");
+                }else{
+                    display.setText(display.getText().toString()+"+");
+                }
                 break;
             case R.id.btnMenos:
                 pantallaInvisible ="";
@@ -412,7 +416,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     resp= resultado/segundoNumero;
                 }else {
                     Toast.makeText(MainActivity.this, "ERROR: no se puede dividir entre cero", Toast.LENGTH_LONG).show();
-                    
+
                     return "ERROR";
                 }
 

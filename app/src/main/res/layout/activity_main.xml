@@ -49,16 +49,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/colorRed"
-                android:text="&lt;--"
+                android:textColor="@color/colorOrange"                android:text="&lt;--"
                 ></Button>
             <Button
                 android:id="@+id/btnPower"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/colorRed"
-                android:text="ON"></Button>
+                android:text="ON"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/colorOrange"></Button>
 
         </LinearLayout>
 
@@ -68,30 +68,43 @@
             android:orientation="horizontal"
             android:layout_weight="1"
             >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/btnAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:textColor="@color/colorOrange"
+                    ></Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/btnPot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="^2"
+                    android:textColor="@color/colorBlue"></Button>
+
+               <Button
+                    android:id="@+id/btnEntre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="/"
+                    android:textColor="@color/colorBlue"></Button>
+            </LinearLayout>
 
 
-            <Button
-                android:id="@+id/btnAC"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="AC"></Button>
-
-            <Button
-                android:id="@+id/btnPot"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="^2"></Button>
-
-
-
-            <Button
-                android:id="@+id/btnEntre"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="/"></Button>
         </LinearLayout>
 
         <LinearLayout
@@ -126,7 +139,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+"></Button>
+                android:text="+"
+                android:textColor="@color/colorBlue"></Button>
         </LinearLayout>
 
         <LinearLayout
@@ -161,7 +175,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="-"></Button>
+                android:text="-"
+                android:textColor="@color/colorBlue"></Button>
         </LinearLayout>
 
         <LinearLayout
@@ -196,7 +211,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="x"></Button>
+                android:text="x"
+                android:textColor="@color/colorBlue"></Button>
         </LinearLayout>
 
         <LinearLayout
@@ -210,7 +226,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="√"></Button>
+                android:text="√"
+                android:textColor="@color/colorBlue"></Button>
 
             <Button
                 android:id="@+id/btnCero"
@@ -231,7 +248,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="="></Button>
+                android:text="="
+                android:textColor="@color/colorBlue"></Button>
         </LinearLayout>
 
     </LinearLayout>

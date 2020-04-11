@@ -259,7 +259,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
                 }
                 pantallaInvisible ="";
-                if(resultado != null && !resultado.isEmpty()){
+                if(resultado != null && !resultado.isEmpty() && !resultado.equals("ERROR")){
                     resultado = resultado.replace(',','.');
                     display.setText(resultado);
                     numeroAnterior = Double.parseDouble(resultado);
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     pantallaInvisible = pantallaInvisible.replace(',','.');
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
                 }
-                if(resultado != null && !resultado.isEmpty()){
+                if(resultado != null && !resultado.isEmpty() && !resultado.equals("ERROR")){
                     resultado = resultado.replace(',','.');
                     display.setText(resultado);
                     numeroAnterior = Double.parseDouble(resultado);
@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
                 }
                 pantallaInvisible ="";
-                if(resultado != null && !resultado.isEmpty()){
+                if(resultado != null && !resultado.isEmpty() && !resultado.equals("ERROR")){
                     resultado = resultado.replace(',','.');
                     display.setText(resultado);
                     numeroAnterior = Double.parseDouble(resultado);
@@ -303,7 +303,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
                 }
                 pantallaInvisible ="";
-                if(resultado != null && !resultado.isEmpty()){
+                if(resultado != null && !resultado.isEmpty() && !resultado.equals("ERROR")){
                     resultado = resultado.replace(',','.');
                     display.setText(resultado);
                     numeroAnterior = Double.parseDouble(resultado);
@@ -346,10 +346,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                break;
             case R.id.btnPot:
-                pantallaInvisible = pantallaInvisible.replace(',','.');
-                numeroAnterior = Double.parseDouble(pantallaInvisible);
+                if (!pantallaInvisible.isEmpty()){
+                    pantallaInvisible = pantallaInvisible.replace(',','.');
+                    numeroAnterior = Double.parseDouble(pantallaInvisible);
+                }
                 pantallaInvisible ="";
-                if(resultado != null){
+                if(resultado != null && !resultado.isEmpty() && !resultado.equals("ERROR")){
                     resultado = resultado.replace(',','.');
                     display.setText(resultado);
                     numeroAnterior = Double.parseDouble(resultado);
@@ -396,8 +398,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-
-
     public String operar(double resultado, char signo, double segundoNumero){
         double resp = resultado;
         switch (signo){
@@ -408,7 +408,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 resp = resultado-segundoNumero;
                 break;
             case '/':
-                resp= resultado/segundoNumero;
+                if (segundoNumero != 0){
+                    resp= resultado/segundoNumero;
+                }else {
+                    Toast.makeText(MainActivity.this, "ERROR: no se puede dividir entre cero", Toast.LENGTH_LONG).show();
+                    
+                    return "ERROR";
+                }
+
                 break;
 
             case'*':

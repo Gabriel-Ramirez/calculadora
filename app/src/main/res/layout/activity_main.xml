@@ -57,8 +57,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="ON"
-                android:backgroundTint="@color/colorAccent"
-                android:textColor="@color/colorOrange"></Button>
+                android:backgroundTint="@color/colorRed"
+                android:textColor="@color/colorBlue"></Button>
 
         </LinearLayout>
 

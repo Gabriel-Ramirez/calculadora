@@ -84,172 +84,301 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    double numeroAnterior;
-    String resultado;
+    Double numeroAnterior = null;
+    String resultado = "";
     char signo = ' ';
-    double segundoNumero;
+    double segundoNumero = ' ';
     String pantallaInvisible="";
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnCero:
-
-                pantallaInvisible = pantallaInvisible+"0";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+0;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"0";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
 
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
+
                 }
 
                 display.setText(display.getText().toString()+"0");
 
                 break;
             case R.id.btnUno:
-
-                pantallaInvisible = pantallaInvisible+"1";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+1;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"1";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
                 display.setText(display.getText().toString()+"1");
-
                 break;
             case R.id.btnDos:
-                pantallaInvisible = pantallaInvisible+"2";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+2;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"2";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
                 display.setText(display.getText().toString()+"2");
                 break;
             case R.id.btnTres:
-                pantallaInvisible = pantallaInvisible+"3";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+3;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"3";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
-                display.setText(display.getText().toString()+"3");
 
+                display.setText(display.getText().toString()+"3");
                 break;
             case R.id.btnCuatro:
-                pantallaInvisible = pantallaInvisible+"4";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+4;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"4";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
                 display.setText(display.getText().toString()+"4");
                 break;
             case R.id.btnCinco:
-                pantallaInvisible = pantallaInvisible+"5";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+5;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"5";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
 
                 display.setText(display.getText().toString()+"5");
 
                 break;
             case R.id.btnSeis:
-                segundoNumero = 6;
-                pantallaInvisible = pantallaInvisible+"6";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+6;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"6";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
                 display.setText(display.getText().toString()+"6");
                 break;
             case R.id.btnSiete:
-                pantallaInvisible = pantallaInvisible+"7";
-
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+7;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"7";
+                }
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
                 display.setText(display.getText().toString()+"7");
                 break;
             case R.id.btnOcho:
-                pantallaInvisible = pantallaInvisible+"8";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+8;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"8";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
 
                 display.setText(display.getText().toString()+"8");
                 break;
             case R.id.btnNueve:
-                pantallaInvisible = pantallaInvisible+"9";
+                if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
+                    pantallaInvisible =""+9;
+                }else{
+                    pantallaInvisible = pantallaInvisible+"9";
+                }
 
                 if ((display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("/") || display.getText().toString().contains("*")) && !(display.getText().toString().contains("√")) ){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
+                    if (numeroAnterior == null){
+                        resultado = resultado.toString();
+                    }else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                    }
                     display2.setText("= "+resultado);
                 }
                 if (display.getText().toString().contains("√")){
                     segundoNumero = Double.parseDouble(pantallaInvisible);
-                    resultado = operar(numeroAnterior,signo,segundoNumero);
-                    display2.setText("= "+resultado);
+                    if (signo == '-'){
+                        pantallaInvisible = "";
+                        Toast.makeText(MainActivity.this, "ERROR: no se permiten numeros negativos", Toast.LENGTH_LONG).show();
+                    } else{
+                        resultado = operar(numeroAnterior,signo,segundoNumero);
+                        display2.setText("= "+resultado);
+                    }
                 }
                 display.setText(display.getText().toString()+"9");
                 break;
@@ -265,26 +394,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     numeroAnterior = Double.parseDouble(resultado);
                 }
                 signo = '+';
-                if (resultado.equals("ERROR")){
+                if (resultado != null  && resultado.equals("ERROR")){
                     display.setText("+");
                 }else{
                     display.setText(display.getText().toString()+"+");
                 }
                 break;
             case R.id.btnMenos:
-                pantallaInvisible ="";
                 if (!pantallaInvisible.isEmpty()){
                     pantallaInvisible = pantallaInvisible.replace(',','.');
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
                 }
+                pantallaInvisible ="";
                 if(resultado != null && !resultado.isEmpty() && !resultado.equals("ERROR")){
                     resultado = resultado.replace(',','.');
                     display.setText(resultado);
                     numeroAnterior = Double.parseDouble(resultado);
                 }
-
                 signo = '-';
-                display.setText(display.getText().toString()+"-");
+                if (resultado != null  && resultado.equals("ERROR")){
+                    display.setText("-");
+                }else{
+                    display.setText(display.getText().toString()+"-");
+                }
                 break;
             case R.id.btnEntre:
                 if (!pantallaInvisible.isEmpty()){
@@ -317,33 +449,104 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnIgual:
                 display.setText(display.getText().toString());
-                display2.setTextSize(40);
+                display2.setTextSize(60);
                 display2.setText("= "+resultado);
                 break;
             case R.id.btnAC:
-                numeroAnterior = 0;
-                display.setText("");
-                display2.setText("");
-                pantallaInvisible = "";
-                resultado="";
+                reiniciar();
                 break;
             case R.id.btnPunto:
                 pantallaInvisible = pantallaInvisible+".";
                 display.setText(display.getText().toString()+".");
                 break;
             case R.id.btnPower:
+                reiniciar();
                 activarDesactivarComponentes();
                 break;
 
             case R.id.btnBorrar:
-                if (pantallaInvisible.length()>0){
-                    pantallaInvisible = pantallaInvisible.substring(0,pantallaInvisible.length()-1);
-                    display.setText(pantallaInvisible);
+                String pantalla = display.getText().toString();
+                if (pantalla.contains("^")){
+                    reiniciar();
+                    pantalla ="";
+
                 }
-                break;
+                if (pantalla.length()>0){
+                    pantalla = pantalla.substring(0,pantalla.length()-1);
+                    display.setText(pantalla);
+                }
+                if (contieneSigno()){
+                    String[] partes;
+                    if(pantalla.contains("-")){
+                        partes   = pantalla.split("-");
+                        signo = '-';
+                        numeroAnterior=Double.parseDouble(partes[0]);
+                        if (partes.length == 2){
+                            System.out.println(partes[1]);
+                            pantallaInvisible = partes[1];
+                            display2.setText("= "+operar(numeroAnterior,signo,Double.parseDouble(pantallaInvisible)));
+                        }else{
+                            pantallaInvisible = "";
+                        }
+                    }
+                    if(pantalla.contains("+")){
+                        partes   = pantalla.split("\\+");
+                        signo = '+';
+                        numeroAnterior=Double.parseDouble(partes[0]);
+                        if (partes.length == 2){
+                            System.out.println(partes[1]);
+                            pantallaInvisible = partes[1];
+                            display2.setText("= "+operar(numeroAnterior,signo,Double.parseDouble(pantallaInvisible)));
+                        }else{
+                            pantallaInvisible = "";
+                        }
+                    }
+                    if(pantalla.contains("*")){
+                        partes   = pantalla.split("\\*");
+                        signo = '-';
+                        numeroAnterior=Double.parseDouble(partes[0]);
+                        if (partes.length == 2){
+                            pantallaInvisible = partes[1];
+                            display2.setText("= "+operar(numeroAnterior,signo,Double.parseDouble(pantallaInvisible)));
+                        }else{
+                            pantallaInvisible = "";
+                        }
+                    }
+                    if(pantalla.contains("/")){
+                        partes   = pantalla.split("/");
+                        signo = '-';
+                        numeroAnterior=Double.parseDouble(partes[0]);
+                        if (partes.length == 2){
+                            pantallaInvisible = partes[1];
+                            display2.setText("= "+operar(numeroAnterior,signo,Double.parseDouble(pantallaInvisible)));
+                        }else{
+                            pantallaInvisible = "";
+                        }
+                    }
+                   }else{
+                    if (pantalla.contains("^")){
+                        pantalla ="";
+                        reiniciar();
+                    }
+                    if (pantalla.length()>=1){
+                        if (pantalla.contains("√")){
+                         pantalla = pantalla.substring(1);
+                         if (pantalla.length()>0){
+                             numeroAnterior = Double.parseDouble(pantalla);
+                         }
+                        }else{
+                            numeroAnterior = Double.parseDouble(pantalla);
+                        }
+                    }
+                        pantallaInvisible = "";
+                   }
+
+
+
+                    break;
 
             case R.id.btnRaiz:
-                numeroAnterior = ' ';
+               numeroAnterior = 1.0;
                 pantallaInvisible ="";
                 signo = '√';
                 display.setText("√");
@@ -361,14 +564,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     numeroAnterior = Double.parseDouble(resultado);
                 }
                 signo = '^';
-                resultado = operar(numeroAnterior,signo,2);
-                resultado = resultado.replace(',', '.');
-                display2.setText(resultado);
-                display.setText("("+display.getText().toString()+")"+"^2");
+                if (numeroAnterior != null){
+                    resultado = operar(numeroAnterior,signo,2.0 );
+                    resultado = resultado.replace(',', '.');
+                    display2.setText(resultado);
+                    display.setText("("+display.getText().toString()+")"+"^2");
+                }else{
+                    Toast.makeText(MainActivity.this, "Primero el numero", Toast.LENGTH_LONG).show();
+                }
                 break;
         }
     }
 
+    public boolean contieneSigno(){
+        if (display.getText().toString().contains("+") || display.getText().toString().contains("-") || display.getText().toString().contains("*") || display.getText().toString().contains("/") ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public void reiniciar(){
+        numeroAnterior = null;
+        resultado = "";
+        signo = ' ';
+        segundoNumero = ' ';
+        pantallaInvisible="";
+        display.setText("");
+        display2.setText("");
+    }
     public void activarDesactivarComponentes(){
         display.setText("");
         display2.setText("");
@@ -402,7 +625,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public String operar(double resultado, char signo, double segundoNumero){
+    public String operar(Double resultado, char signo, Double segundoNumero){
         double resp = resultado;
         switch (signo){
             case '+':

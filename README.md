@@ -5,5 +5,5 @@ Desarrollada por: Gabriel Antonio Ramirez Puentes <br>
 Carnet: RP15019 <br>
 
 ## Descargas
-[Link 1 apk](https://drive.google.com/file/d/1-6AnPuR-dxL_u5ct32ZQa-JJtnw8B-38/view?usp=sharing)<br>
-[Codigo fuente en ZIP](https://drive.google.com/open?id=1YZN6RwrQRg0DgrMN5hXScSesmmskHKD0)<br>
+[Link APK](https://drive.google.com/open?id=1tDILdgQTxFd-kSLiDR1GBIpLgfiBdFjE)<br>
+[Codigo fuente en ZIP](https://drive.google.com/open?id=1rvEEeIsvUONcZUrUGrtc7orwO7znnZX-)<br>

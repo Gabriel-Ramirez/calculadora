@@ -13,26 +13,17 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button numero0, numero1, numero2, numero3, numero4, numero5, numero6, numero7, numero8, numero9;
-    private Button suma, resta, multiplicacion, division;
-    private Button btnAC;
-    private Button igual;
-    private TextView display;
-    private TextView display2;
-    private Button btnPower;
+    private Button numero0, numero1, numero2, numero3, numero4, numero5, numero6, numero7, numero8, numero9,
+            suma, resta, multiplicacion, division, btnAC, igual, btnPower, btnPunto, btnBorrar, btnRaiz, btnPotencia;
+    private TextView display, display2;
     boolean estado = false;
-    private Button btnPunto;
-    private Button btnBorrar;
-    private Button btnRaiz;
-    private Button btnPotencia;
-
     DecimalFormat formato = new DecimalFormat("#.####");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        getSupportActionBar().hide();
+        getSupportActionBar().hide();
 
         btnPotencia = (Button) findViewById(R.id.btnPot);
         btnPotencia.setOnClickListener(this);
@@ -626,6 +617,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public String operar(Double resultado, char signo, Double segundoNumero){
+        display2.setTextSize(40);
         double resp = resultado;
         switch (signo){
             case '+':

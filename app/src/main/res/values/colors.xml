@@ -6,4 +6,10 @@
     <color name="colorRed">#FF2D00</color>
     <color name="colorOrange">#F57357</color>
     <color name="colorBlue">#0023FF</color>
+    <color name="salmontransp">#7FFFA07A</color>
+    <color name="tealtransparent">#7F1DE9B6</color>
+    <color name="teal">#001DE9B6</color>
+    <color name="cian">#1A90CAF9</color>
+    <color name="salmondark">#E9967A</color>
+
 </resources>

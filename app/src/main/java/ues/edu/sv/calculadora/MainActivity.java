@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView display, display2;
     boolean estado = false;
     DecimalFormat formato = new DecimalFormat("#.####");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btnUno:
+
                 if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
                     pantallaInvisible =""+1;
                 }else{
@@ -145,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText(display.getText().toString()+"1");
                 break;
             case R.id.btnDos:
+
                 if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
                     pantallaInvisible =""+2;
                 }else{
@@ -204,6 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText(display.getText().toString()+"3");
                 break;
             case R.id.btnCuatro:
+
                 if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
                     pantallaInvisible =""+4;
                 }else{
@@ -232,6 +238,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText(display.getText().toString()+"4");
                 break;
             case R.id.btnCinco:
+
                 if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
                     pantallaInvisible =""+5;
                 }else{
@@ -262,6 +269,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btnSeis:
+
                 if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
                     pantallaInvisible =""+6;
                 }else{
@@ -290,6 +298,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText(display.getText().toString()+"6");
                 break;
             case R.id.btnSiete:
+
                 if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
                     pantallaInvisible =""+7;
                 }else{
@@ -317,6 +326,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText(display.getText().toString()+"7");
                 break;
             case R.id.btnOcho:
+
                 if (pantallaInvisible.isEmpty() || pantallaInvisible == null){
                     pantallaInvisible =""+8;
                 }else{
@@ -374,6 +384,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText(display.getText().toString()+"9");
                 break;
             case R.id.btnMas:
+
                 if (!pantallaInvisible.isEmpty()){
                     pantallaInvisible = pantallaInvisible.replace(',','.');
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
@@ -392,6 +403,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btnMenos:
+
                 if (!pantallaInvisible.isEmpty()){
                     pantallaInvisible = pantallaInvisible.replace(',','.');
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
@@ -410,6 +422,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btnEntre:
+
                 if (!pantallaInvisible.isEmpty()){
                     pantallaInvisible = pantallaInvisible.replace(',','.');
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
@@ -425,6 +438,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText(display.getText().toString()+"/");
                 break;
             case R.id.btnPor:
+
                 if (!pantallaInvisible.isEmpty()){
                     pantallaInvisible = pantallaInvisible.replace(',','.');
                     numeroAnterior = Double.parseDouble(pantallaInvisible);
@@ -460,7 +474,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (pantalla.contains("^")){
                     reiniciar();
                     pantalla ="";
-
                 }
                 if (pantalla.length()>0){
                     pantalla = pantalla.substring(0,pantalla.length()-1);
@@ -532,8 +545,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         pantallaInvisible = "";
                    }
 
-
-
                     break;
 
             case R.id.btnRaiz:
@@ -541,8 +552,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 pantallaInvisible ="";
                 signo = '√';
                 display.setText("√");
-
                break;
+
             case R.id.btnPot:
                 if (!pantallaInvisible.isEmpty()){
                     pantallaInvisible = pantallaInvisible.replace(',','.');
@@ -558,7 +569,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (numeroAnterior != null){
                     resultado = operar(numeroAnterior,signo,2.0 );
                     resultado = resultado.replace(',', '.');
-                    display2.setText(resultado);
+                    display2.setText("= "+resultado);
                     display.setText("("+display.getText().toString()+")"+"^2");
                 }else{
                     Toast.makeText(MainActivity.this, "Primero el numero", Toast.LENGTH_LONG).show();
